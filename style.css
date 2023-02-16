@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: orangered;
+  letter-spacing: 1px;
+  margin: 30px 0;
+}
+
+.bucket-list {
+  width: 450px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.list-head {
+  width: 300px;
+  display: flex;
+  gap: 10px;
+}
+
+input::placeholder {
+  color: lightgray;
+}
+
+.entered-list {
+  width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.add-list {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4385f5;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  opacity: .6;
+  pointer-events: none;
+}
+
+.add-list.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.tasks {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.item {
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item p {
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.item-completed p {
+  text-decoration: line-through;
+  color: black;
+}
+
+.item-btn {
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.achievement {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightgreen;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.delete {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightcoral;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
