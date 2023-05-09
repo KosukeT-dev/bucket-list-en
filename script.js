@@ -34,7 +34,7 @@ addBtn.addEventListener('click', () => {
     // ローカルストレージにデータを保存
     localStorage.setItem('myList', tasks.innerHTML);
   } else {
-    alert('入力してください')
+    alert('Please enter.')
   }
 })
 
