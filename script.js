@@ -8,7 +8,7 @@ input.addEventListener('keyup', () => {
   } else {
     addBtn.classList.remove('active')
   }
-})
+});
 
 // ページ読み込み時にローカルストレージからデータを取得
 window.addEventListener('load', () => {
@@ -25,8 +25,8 @@ addBtn.addEventListener('click', () => {
     newItem.innerHTML = `
       <p>${input.value}</p>
       <div class="item-btn">
-        <button class="achievement" type="achievement">Achieved</button>
-        <button class="delete" type="delete">Delete</button>
+        <button class="achievement" type="button">Achieved</button>
+        <button class="delete" type="button">Delete</button>
       </div>`;
     tasks.appendChild(newItem);
     input.value = '';  
@@ -36,16 +36,18 @@ addBtn.addEventListener('click', () => {
   } else {
     alert('Please enter.')
   }
-})
+});
 
 tasks.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete')){
     e.target.parentElement.parentElement.remove();
+    localStorage.setItem('myList', tasks.innerHTML);
   }
-})
+});
 
 tasks.addEventListener('click', (e) => {
   if (e.target.classList.contains('achievement')){
     e.target.parentElement.parentElement.classList.toggle('item-completed');
+    localStorage.setItem('myList', tasks.innerHTML);
   }
-})
+});
